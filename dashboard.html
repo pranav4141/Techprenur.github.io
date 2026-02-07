@@ -1,31 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Dashboard | StartupOps</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body onload="checkAuth()">
 
-  <header>
-    <h2>StartupOps Dashboard</h2>
-    <button onclick="logout()">Logout</button>
-  </header>
+<header>
+  <h2>🚀 StartupOps</h2>
+  <button onclick="logout()">Logout</button>
+</header>
 
-  <section class="card">
-    <h3>Startup Profile</h3>
-    <input id="startupName" placeholder="Startup Name">
-    <input id="problem" placeholder="Problem Statement">
-    <input id="solution" placeholder="Solution">
-    <button onclick="saveStartup()">Save</button>
-  </section>
+<div class="dashboard">
+  <div class="grid">
 
-  <section class="card">
-    <h3>Tasks</h3>
-    <input id="taskInput" placeholder="New Task">
-    <button onclick="addTask()">Add Task</button>
-    <ul id="taskList"></ul>
-  </section>
+    <!-- Startup Profile -->
+    <section class="card">
+      <h3>Startup Profile</h3>
 
-  <script src="js/dashboard.js"></script>
+      <input id="startupName" placeholder="Startup Name">
+      <input id="problem" placeholder="Problem Statement">
+      <input id="solution" placeholder="Solution Overview">
+
+      <button onclick="saveStartup()">Save Startup</button>
+    </section>
+
+    <!-- Tasks -->
+    <section class="card">
+      <h3>Execution Tasks</h3>
+
+      <input id="taskInput" placeholder="Add new task">
+      <button onclick="addTask()">Add Task</button>
+
+      <ul id="taskList"></ul>
+    </section>
+
+  </div>
+</div>
+
+<script src="js/dashboard.js"></script>
 </body>
 </html>
