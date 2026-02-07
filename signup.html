@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Signup | StartupOps</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <form class="card" onsubmit="signup(event)">
-    <h2>Create Account</h2>
-    <input type="text" id="name" placeholder="Name" required>
+
+<div class="center">
+  <form class="auth-card" onsubmit="signup(event)">
+    <h2>Create your account</h2>
+    <p>Start building your startup journey</p>
+
+    <input type="text" id="name" placeholder="Full Name" required>
     <input type="email" id="email" placeholder="Email" required>
     <input type="password" id="password" placeholder="Password" required>
-    <button>Create Account</button>
-    <p>Already have an account? <a href="login.html">Login</a></p>
-  </form>
 
-  <script src="js/auth.js"></script>
+    <button type="submit">Get Started</button>
+
+    <p style="margin-top:12px;font-size:14px">
+      Already have an account? <a href="login.html">Login</a>
+    </p>
+  </form>
+</div>
+
+<script src="js/auth.js"></script>
 </body>
 </html>
