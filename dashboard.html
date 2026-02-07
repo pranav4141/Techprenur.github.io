@@ -2,45 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dashboard | StartupOps</title>
+  <title>StartupOps Dashboard</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body onload="checkAuth()">
 
-<header>
-  <h2>🚀 StartupOps</h2>
-  <button onclick="logout()">Logout</button>
-</header>
+<div class="app">
 
-<div class="dashboard">
-  <div class="grid">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h1>🚀 StartupOps</h1>
 
-    <!-- Startup Profile -->
-    <section class="card">
-      <h3>🚀 Your Startup Snapshot</h3>
+    <nav>
+      <a class="active">Dashboard</a>
+      <a>Startup</a>
+      <a>Tasks</a>
+      <a>Analytics</a>
+      <a>Pitch</a>
+    </nav>
 
-      <input id="startupName" placeholder="Startup Name">
-      <input id="problem" placeholder="Problem Statement">
-      <input id="solution" placeholder="Solution Overview">
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </aside>
 
-      <button onclick="saveStartup()">Save Startup</button>
-    </section>
+  <!-- MAIN -->
+  <main class="main">
 
-    <!-- Tasks -->
-    <section class="card">
-      <h3>📌 Execution Tasks</h3>
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div>
+        <h2>Founder Workspace</h2>
+        <p>Track execution. Validate ideas. Move faster.</p>
+      </div>
+    </div>
 
-      <input id="taskInput" placeholder="Add new task">
-      <button onclick="addTask()">Add Task</button>
+    <!-- STATS -->
+    <div class="stats">
+      <div class="stat-card purple">
+        <h3>Startup Stage</h3>
+        <p>Early / MVP</p>
+      </div>
+      <div class="stat-card blue">
+        <h3>Tasks</h3>
+        <p id="taskCount">0 Active</p>
+      </div>
+      <div class="stat-card green">
+        <h3>Validation</h3>
+        <p>Pending</p>
+      </div>
+    </div>
 
-      <ul id="taskList"></ul>
-    </section>
+    <!-- GRID -->
+    <div class="content-grid">
 
-  </div>
+      <!-- STARTUP -->
+      <section class="card">
+        <h3>🚀 Startup Snapshot</h3>
+        <input id="startupName" placeholder="Startup Name">
+        <input id="problem" placeholder="Problem you solve">
+        <input id="solution" placeholder="Your solution">
+        <button onclick="saveStartup()">Save Startup</button>
+      </section>
+
+      <!-- TASKS -->
+      <section class="card">
+        <h3>📌 Execution Tasks</h3>
+        <input id="taskInput" placeholder="What needs to be done?">
+        <button onclick="addTask()">Add Task</button>
+        <ul id="taskList"></ul>
+      </section>
+
+    </div>
+
+  </main>
 </div>
 
 <script src="js/dashboard.js"></script>
 </body>
 </html>
-
