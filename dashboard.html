@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | StartupOps</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <h2>StartupOps</h2>
+  <span id="userInfo"></span>
+</nav>
+
+<section class="dashboard">
+
+  <div class="card">
+    <h3>Startup Profile</h3>
+    <p>Name: Demo Startup</p>
+    <p>Stage: MVP</p>
+  </div>
+
+  <div class="card">
+    <h3>Tasks</h3>
+    <p>Completed: <span id="tasksDone">2</span>/5</p>
+  </div>
+
+  <div class="card">
+    <h3>Feedback</h3>
+    <p>Validation Score: 7.8 / 10</p>
+  </div>
+
+  <div class="card">
+    <h3>Analytics</h3>
+    <progress value="40" max="100"></progress>
+  </div>
+
+  <div class="card full">
+    <h3>Investor Pitch (Mock)</h3>
+    <p><strong>Problem:</strong> Startup execution inefficiency</p>
+    <p><strong>Solution:</strong> Unified digital startup workspace</p>
+    <p><strong>Roadmap:</strong> MVP → Growth → Scale</p>
+  </div>
+
+</section>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>
